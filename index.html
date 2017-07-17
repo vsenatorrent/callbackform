@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/main.css">
   <script src="js/jquery-3.2.1.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
 </head>
 
 <body>
@@ -18,7 +19,85 @@
   </div>
 
   <div class="text">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt cum itaque, vero nostrum facilis, eligendi sapiente nobis tempora placeat maiores sit temporibus rem autem, iste mollitia magni distinctio ad optio porro ipsam. Culpa eos quibusdam id amet, soluta itaque pariatur incidunt, earum quae repellendus saepe sint praesentium necessitatibus non magnam maxime cum nisi iure iste obcaecati? Sequi enim amet quibusdam tenetur, maxime sed. Ea, nihil dolore dolorum recusandae ab laudantium, reprehenderit odio officia facere, quis quisquam repudiandae consequatur aperiam natus placeat nostrum dignissimos perspiciatis molestiae esse eligendi illo dicta reiciendis animi. Atque at fuga neque, quam itaque nulla, et molestiae adipisci quia perspiciatis reiciendis rem? Quibusdam quos quaerat blanditiis aperiam, possimus molestiae fugit quas, sequi iste, praesentium ipsa. Cupiditate repudiandae in qui illo, optio veritatis et quia! Quibusdam dignissimos corporis, quas, reiciendis quisquam omnis incidunt quis minima, aperiam soluta aliquam in ipsa totam veritatis ducimus tempora doloribus odit sed aliquid temporibus unde nisi. A, sunt in, ab quo vitae deserunt reiciendis fugiat explicabo iste doloribus dicta, velit id laborum reprehenderit provident. Eius, similique mollitia consequatur. Sequi doloribus officiis, laboriosam, voluptatem delectus, consequatur eaque dignissimos iste tempora quia alias! Aspernatur sunt sapiente fugit qui debitis quasi, nostrum, modi in vero. Ex! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore dolores quaerat, blanditiis maiores quae dicta modi ut pariatur id veniam, a ex aliquid quam reprehenderit cupiditate assumenda ullam! Harum consequatur in repellendus, vel distinctio molestias, odit, eum quas porro placeat velit, quisquam. Vero natus vel quo doloribus, sed facere, amet placeat harum, ipsum non suscipit impedit sequi doloremque rerum magnam recusandae aperiam quibusdam asperiores perspiciatis a. Provident nisi, laborum, iusto expedita vitae repellat ad harum nostrum optio, earum, nobis nihil consequatur nulla deserunt est. Sequi porro, animi maiores omnis ex quidem quae dolores quos odio. Id dolore, possimus delectus harum!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, repellat maiores enim beatae in dolorem iste iusto iure, dolor placeat ipsa nemo quas eveniet sunt, incidunt tempore quaerat nobis numquam dolores quibusdam! Temporibus ipsa qui quas, exercitationem velit eligendi minima, voluptatibus illo, eaque consequuntur delectus, consectetur quisquam similique modi quaerat.</p>
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+  </div>
+
+  <div class="modal">
+    <div class="close">&times;</div>
+    
+    <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <!-- Контейнер, содержащий форму обратной связи -->
+        <div class="panel panel-info">
+          <!-- Заголовок контейнера -->
+          <div class="panel-heading">
+            <h2 class="panel-title">Форма обратной связи</h2>
+          </div>
+          <!-- Содержимое контейнера -->
+          <div class="panel-body">
+ 
+            <!-- Сообщение, отображаемое в случае успешной отправки данных -->
+            <div class="alert alert-success hidden" role="alert" id="successMessage">
+              <strong>Внимание!</strong> Ваше сообщение успешно отправлено.
+            </div>
+ 
+            <!-- Форма обратной связи -->
+            <form id="contactForm">
+              <div class="row">
+ 
+                
+                <div id="error" class="col-sm-12" style="color: #ff0000; margin-top: 5px; margin-bottom: 5px;"></div>
+                
+                <!-- Имя и email пользователя -->                
+                <div class="col-sm-6">
+                  <!-- Имя пользователя -->
+                  <div class="form-group has-feedback">
+                    <label for="name" class="control-label">Введите ваше имя:</label>
+                    <input type="text" id="name" name="name" class="form-control" required="required" value="" placeholder="Например, Иван Иванович" minlength="2" maxlength="30">
+                    <span class="glyphicon form-control-feedback"></span>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <!-- Email пользователя -->
+                  <div class="form-group has-feedback">
+                    <label for="email" class="control-label">Введите адрес email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required="required"  value="" placeholder="Например, ivan@mail.ru" maxlength="30">
+                    <span class="glyphicon form-control-feedback"></span>
+                  </div>
+                </div>
+              </div>
+ 
+              <!-- Сообщение пользователя -->
+              <div class="form-group has-feedback">
+                <label for="message" class="control-label">Введите сообщение:</label>
+                <textarea id="message" class="form-control" cols="46" rows="3" placeholder="Введите сообщение от 10 до 500 символов" minlength="10" maxlength="100" required="required"></textarea>
+              </div>
+ 
+       
+              <!-- Изображение, содержащее код капчи -->		  
+	            <img id="img-captcha" src="/feedback/captcha.php">
+              <!-- Элемент, обновляющий код капчи -->
+	            <div id="reload-captcha" class="btn btn-default"><i class="glyphicon glyphicon-refresh"></i> Обновить</div>
+	            <!-- Блок для ввода кода капчи -->
+	            <div class="form-group has-feedback">
+                <label id="label-captcha" for="captcha" class="control-label">Пожалуйста, введите указанный на изображении код:</label>
+	              <input id="text-captcha" name="captcha" type="text" class="form-control" required="required" value="" autocomplete="off" minlength="6" maxlength="6">
+	              <span class="glyphicon form-control-feedback"></span>
+              </div>
+ 
+              <!-- Кнопка, отправляющая форму -->  
+              <button type="submit" class="btn btn-primary pull-right">Отправить сообщение</button>
+            </form><!-- Конец формы -->
+ 
+          </div>
+        </div><!-- Конец контейнера -->
+ 
+      </div>
+    </div>
+  </div>
   </div>
 
   <div class="btnBorderSq">
